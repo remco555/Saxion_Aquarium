@@ -13,21 +13,23 @@ public class Fish {
         this.height = height;
         this.vel = vel;
 
-        //Set random Y, set X to either left or right side of screen
+        //set X to either left or right side of screen
         if (Math.random() < 0.5){
             this.x = 0;
         } else {
             this.x = screenWidth;
             this.vel *= -1;
+            //Flip image if it starts on the right side of the screen
             this.width *= -1;
         }
-
+        //Set random Y
         this.y = (int) (Math.random() * (screenHeight));
     }
 
     public String getFileName() {
         return fileName;
     }
+
     public int getWidth() {
         return width;
     }
